@@ -1,7 +1,7 @@
-import { useDispatch } from 'react-redux';
-import { deleteContact } from "../../redux/contactsOps";
-import { FaUser, FaPhone } from 'react-icons/fa';
-import s from './ContactItem.module.css';
+import { useDispatch } from "react-redux";
+import { deleteContact } from "../../redux/contacts/operations";
+import { FaUser, FaPhone } from "react-icons/fa";
+import s from "./ContactItem.module.css";
 import PropTypes from "prop-types";
 
 const ContactItem = ({ id, name, number }) => {
@@ -35,7 +35,7 @@ const ContactItem = ({ id, name, number }) => {
 ContactItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired, 
+  number: PropTypes.string.isRequired,
   onDelete: PropTypes.func.isRequired,
 };
 export default ContactItem;

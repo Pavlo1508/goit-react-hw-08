@@ -1,31 +1,18 @@
 import { Field, Form, Formik } from "formik";
-import s from "../css/Login.module.css";
-import { Link, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { registerThunk } from "../redux/authOps";
+import { Link } from "react-router-dom";
+import s from "./RegistrationForm.module.css";
 
-const Register = () => {
-
+// eslint-disable-next-line react/prop-types
+const RegistrationForm = ({handleSubmit}) => {
 	const INITIAL_VALUES = {
-		name: '',
-		email: '',
-		password: '',
-	}
-
-	const dispatch = useDispatch();
-
-	const navigate = useNavigate()
-	
-	const handleSubmit = (values, options) => {
-		console.log(values);
-		dispatch(registerThunk(values)).unwrap().then(() => navigate('/'))
-		options.resetForm();
-	}
-
+    name: "",
+    email: "",
+    password: "",
+	};
 	
 	return (
     <div className={s.login_container}>
-      Register
+      <h2>Register</h2>
       <Formik initialValues={INITIAL_VALUES} onSubmit={handleSubmit}>
         <Form className={s.login_form}>
           <label className={s.login_label}>
@@ -53,4 +40,4 @@ const Register = () => {
   );
 }
 
-export default Register;
+export default RegistrationForm

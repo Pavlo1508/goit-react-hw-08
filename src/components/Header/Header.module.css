@@ -1,0 +1,23 @@
+.header {
+	box-shadow: 0 0 10px black;
+	padding: 20px;
+	border-radius: 0 0 20px 20px;
+	margin-bottom: 30px;
+}
+
+.nav {
+	display: flex;
+	gap: 10px;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.page {
+	color: black;
+	text-decoration: none;
+}
+
+.active {
+	color: rgb(179, 80, 0);
+	text-decoration: underline;
+}
