@@ -1,0 +1,9 @@
+.page {
+	color: black;
+	text-decoration: none;
+}
+
+.active {
+	color: rgb(179, 80, 0);
+	text-decoration: underline;
+}
